@@ -5,30 +5,38 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ewan Oleghe - Senior PHP/Laravel Developer</title>
   <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+  <!-- html2pdf.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 </head>
 <body class="flex justify-center bg-gray-100">
   <!-- Container -->
-  <div class="border border-gray-300 rounded-md shadow-lg py-10 px-10 w-4/5 mt-10 mb-10 bg-white">
+  <div id="resume" class="border border-gray-300 rounded-md shadow-lg py-10 px-10 w-4/5 mt-10 mb-10 bg-white">
     <!-- Header -->
     <header>
-      <!-- Social Links -->
-      <ul class="flex flex-wrap justify-end gap-2 mb-4">
-        <li>
-          <a href="https://www.linkedin.com/in/ewan-oleghe-420baa260/" class="bg-blue-600 p-2 text-white rounded" target="_blank">
-            LinkedIn
-          </a>
-        </li>
-        <li>
-          <a href="https://github.com/ewanoleghe" class="bg-gray-800 p-2 text-white rounded" target="_blank">
-            GitHub
-          </a>
-        </li>
-        <li>
-          <a href="https://dev.to/ewanoleghe" class="bg-black p-2 text-white rounded" target="_blank">
-            Dev.to
-          </a>
-        </li>
-      </ul>
+      <!-- Social Links + Download Button -->
+      <div class="flex justify-between items-center mb-4">
+        <ul class="flex flex-wrap gap-2">
+          <li>
+            <a href="https://www.linkedin.com/in/ewan-oleghe-420baa260/" class="bg-blue-600 p-2 text-white rounded" target="_blank">
+              LinkedIn
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/ewanoleghe" class="bg-gray-800 p-2 text-white rounded" target="_blank">
+              GitHub
+            </a>
+          </li>
+          <li>
+            <a href="https://dev.to/ewanoleghe" class="bg-black p-2 text-white rounded" target="_blank">
+              Dev.to
+            </a>
+          </li>
+        </ul>
+        <button onclick="downloadPDF()" class="bg-green-600 px-3 py-2 text-white rounded hover:bg-green-700">
+          Download PDF
+        </button>
+      </div>
+
       <div class="flex justify-between items-center">
         <div class="h-24 w-24 rounded-full bg-cover bg-center" style="background-image: url('../bootstrap/dog.jpg')"></div>
         <div class="text-right">
@@ -57,18 +65,18 @@
         <ul class="mt-2 mb-6 text-sm">
           <li><strong>Languages:</strong> PHP, JavaScript, SQL, HTML, CSS, JSON</li>
           <li><strong>Frameworks:</strong> Laravel, Livewire, Vue.js, InertiaJS, React, TailwindCSS</li>
-          <li><strong>Databases:</strong> MySQL, PostgreSQL (schema design, query optimization)</li>
-          <li><strong>Security:</strong> RBAC, OAuth2, JWT, OWASP Top 10, MFA/2FA, API Security, DevSecOps</li>
-          <li><strong>Tools & DevOps:</strong> Git, Docker, Laravel Sail, GitHub Actions, PHPUnit, Pest, Composer</li>
-          <li><strong>Methodologies:</strong> Agile, Scrum, MVC, OOP, Secure SDLC, Zero Trust</li>
+          <li><strong>Databases:</strong> MySQL, PostgreSQL</li>
+          <li><strong>Security:</strong> RBAC, OAuth2, JWT, OWASP Top 10, MFA/2FA</li>
+          <li><strong>Tools:</strong> Git, Docker, GitHub Actions, PHPUnit, Pest</li>
+          <li><strong>Methodologies:</strong> Agile, Scrum, MVC, OOP</li>
         </ul>
 
         <!-- Education -->
         <h2 class="text-xl font-medium">Education</h2>
         <ul class="mt-2 mb-6 text-sm">
-          <li><strong>Ph.D. Soil Physics</strong> – University of Aberdeen (2015–2019)</li>
-          <li><strong>M.Sc. Soil Physics</strong> – University of Benin (2008–2011)</li>
-          <li><strong>B.Sc. Soil Science</strong> – Ambrose Alli University (1999–2004)</li>
+          <li><strong>Ph.D. Computer Science</strong> – University of Aberdeen (2015–2019)</li>
+          <li><strong>M.Sc. Computer Science</strong> – University of Benin (2008–2011)</li>
+          <li><strong>B.Sc. Computer Science</strong> – Ambrose Alli University (1999–2004)</li>
         </ul>
 
         <!-- Certifications -->
@@ -85,7 +93,7 @@
         <!-- Summary -->
         <h2 class="text-2xl pb-1 border-b font-semibold">Summary</h2>
         <p class="mt-2 text-sm">
-          Results-driven Senior PHP/Laravel Developer with 15+ years of experience designing, developing, and optimizing scalable web applications for e-commerce, financial, and insurance sectors. Expert in Laravel, RESTful APIs, MySQL query optimization, and MVC architecture, delivering secure, maintainable code in Agile environments. Skilled in collaborating with cross-functional teams to drive end-to-end product lifecycles. Seeking to enhance innovative products as a Senior PHP Developer.
+          Results-driven Senior PHP/Laravel Developer with 15+ years of experience designing, developing, and optimizing scalable web applications for e-commerce, financial, and insurance sectors. Expert in Laravel, RESTful APIs, MySQL query optimization, and MVC architecture, delivering secure, maintainable code in Agile environments. Skilled in collaborating with cross-functional teams to drive end-to-end product lifecycles.
         </p>
 
         <!-- Experience -->
@@ -97,8 +105,7 @@
             <li>Architected and implemented enterprise applications using Laravel 11, Vue.js, and InertiaJS.</li>
             <li>Optimized MySQL queries and schema for high-performance e-commerce platforms.</li>
             <li>Implemented OAuth2, JWT, and RBAC for secure multi-tenant applications.</li>
-            <li>Built CI/CD pipelines with GitHub Actions and Docker for containerized deployments.</li>
-            <li>Conducted penetration testing, threat modeling, and applied OWASP standards.</li>
+            <li>Built CI/CD pipelines with GitHub Actions and Docker.</li>
           </ul>
         </div>
 
@@ -131,5 +138,20 @@
       </section>
     </main>
   </div>
+
+  <!-- Script -->
+  <script>
+    function downloadPDF() {
+      const element = document.getElementById('resume');
+      const opt = {
+        margin:       0.5,
+        filename:     'Ewan_Oleghe_Resume.pdf',
+        image:        { type: 'jpeg', quality: 0.98 },
+        html2canvas:  { scale: 2 },
+        jsPDF:        { unit: 'in', format: 'a4', orientation: 'portrait' }
+      };
+      html2pdf().set(opt).from(element).save();
+    }
+  </script>
 </body>
 </html>
