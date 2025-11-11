@@ -1,5 +1,5 @@
 <!DOCTYPE html><html><head>
-      <title>Ewan - DC:1 Walkthrough</title>
+      <title>index</title>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       
@@ -31,27 +31,123 @@
   <a href="..\resume.html" target="_blank">Resume</a>
 </nav>
 <hr>
-<h1 id="blog-posts">Blog Posts </h1>
-<p>Welcome to the blog! Here are all the latest posts:</p>
-<h2 id="latest-posts">Latest Posts </h2>
+<h2 id="-hi-im-ewanoleghe--cybersecurity-analyst--offensive-security-engineer">👋 Hi, I’m @ewanoleghe – Cybersecurity Analyst &amp; Offensive Security Engineer </h2>
+<hr>
+<p>🔐 <strong>SOC Analyst | Penetration Tester | OT/ICS Security Enthusiast</strong><br>
+Former full-stack developer with <strong>15+ years in secure software engineering</strong>, now focused on <strong>threat detection, incident response, penetration testing, and operational technology (OT) security</strong>. Certified in <strong>CompTIA Security+</strong> and <strong>AWS Cloud Practitioner</strong>, actively pursuing <strong>OSCP</strong> and <strong>CySA+</strong>.</p>
+<hr>
+<h3 id="️-cybersecurity-expertise">🛡️ Cybersecurity Expertise </h3>
 <ul>
-<li>
-<p><a href="dc1.html">DC:1 Walkthrough</a><br>
-<em>Published on November 10, 2025</em></p>
-</li>
-<li>
-<p><a href="#">Post Title 2</a><br>
-<em>Published on: YYYY-MM-DD</em></p>
-</li>
-<li>
-<p><a href="#">Post Title 3</a><br>
-<em>Published on: YYYY-MM-DD</em></p>
-</li>
-<li>
-<p><a href="#">Post Title 4</a><br>
-<em>Published on: YYYY-MM-DD</em></p>
-</li>
+<li>🔍 <strong>SOC Operations</strong>: SIEM (Splunk, Microsoft Sentinel, ELK), EDR (Carbon Black), phishing analysis, threat hunting</li>
+<li>🧨 <strong>Offensive Security</strong>: Penetration testing with <strong>Metasploit, Nmap, Burp Suite, Wireshark</strong>, Nessus, privilege escalation</li>
+<li>☁️ <strong>Cloud &amp; Infrastructure</strong>: AWS IAM, GuardDuty, CloudTrail, Zero Trust, secure network architecture</li>
+<li>🏭 <strong>OT/ICS Security</strong>: Modbus/BACnet simulation, Purdue Model, ISA/IEC 62443 alignment</li>
+<li>🐍 <strong>Security Automation</strong>: Python (Pandas, NumPy) for log correlation, anomaly detection, Splunk dashboarding</li>
 </ul>
+<hr>
+<h3 id="-active-labs--red-team-training">🧪 Active Labs &amp; Red Team Training </h3>
+<ul>
+<li><strong>Hack The Box CPTS</strong> (In Progress) – 15+ machines, focus on Linux/Windows privilege escalation</li>
+<li><strong>OSCP Labs</strong> – Buffer overflows, web app exploitation, Active Directory attacks</li>
+<li><strong>SIEM Home Lab</strong> – Splunk-based SOC simulation with real-time threat detection &amp; NIST 800-61 workflows</li>
+<li><strong>Container &amp; API Hardening</strong> – Trivy/Clair scans, OWASP Top 10 testing with Burp Suite/Postman</li>
+<li><strong>ICS Cyber Range</strong> – Simulated attacks on industrial protocols (Modbus, BACnet)</li>
+</ul>
+<hr>
+<h3 id="-currently-mastering">🔬 Currently Mastering </h3>
+<ul>
+<li>Advanced <strong>Active Directory attacks</strong> &amp; <strong>lateral movement</strong></li>
+<li><strong>Purple teaming</strong> &amp; <strong>MITRE ATT&amp;CK</strong> framework mapping</li>
+<li><strong>YARA</strong>, <strong>Sigma</strong>, and <strong>custom detection rules</strong> for SIEM</li>
+<li><strong>Kotlin</strong> for secure mobile app development</li>
+</ul>
+<hr>
+<h3 id="mitre-attck-in-practice">MITRE ATT&amp;CK in Practice </h3>
+<table>
+<thead>
+<tr>
+<th>Tactic</th>
+<th>Technique</th>
+<th>Application</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Initial Access</td>
+<td>T1190 – Exploit Public App</td>
+<td>Laravel debug mode → RCE</td>
+</tr>
+<tr>
+<td>Execution</td>
+<td>T1059.006 – Python</td>
+<td>Reverse shell via cron</td>
+</tr>
+<tr>
+<td>Persistence</td>
+<td>T1053 – Scheduled Task</td>
+<td><code>at</code> job + encoded payload</td>
+</tr>
+<tr>
+<td>Privilege Escalation</td>
+<td>T1068 – Kernel Exploit</td>
+<td>Dirty COW, SUID binary</td>
+</tr>
+<tr>
+<td>Defense Evasion</td>
+<td>T1070.004 – Log Clear</td>
+<td><code>shred</code>, <code>wevtutil cl</code></td>
+</tr>
+<tr>
+<td>Lateral Movement</td>
+<td>T1021.001 – RDP</td>
+<td>Pass-the-Hash + RDP</td>
+</tr>
+<tr>
+<td>Exfiltration</td>
+<td>T1041 – C2 Channel</td>
+<td>DNS tunneling, HTTPS POST</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="oscp-preparation-guide-90-day-roadmap">OSCP Preparation Guide (90-Day Roadmap) </h3>
+<h4 id="phase-1-foundation-weeks-13">Phase 1: Foundation (Weeks 1–3) </h4>
+<ul>
+<li>Master <strong>Linux/Windows CLI</strong>, <code>netstat</code>, <code>wmic</code>, <code>tasklist</code></li>
+<li>Complete <strong>TJNull’s HTB List</strong> (50 retired boxes)</li>
+<li>Write <strong>one-liner enumeration scripts</strong></li>
+</ul>
+<h4 id="phase-2-methodology-weeks-46">Phase 2: Methodology (Weeks 4–6) </h4>
+<pre data-role="codeBlock" data-info="bash" class="language-bash bash"><code>nmap <span class="token parameter variable">-sC</span> <span class="token parameter variable">-sV</span> -p- --min-rate <span class="token number">1000</span> <span class="token parameter variable">-oA</span> scan <span class="token operator">&lt;</span>IP<span class="token operator">&gt;</span>
+gobuster <span class="token function">dir</span> <span class="token parameter variable">-u</span> http://<span class="token operator">&lt;</span>IP<span class="token operator">&gt;</span> <span class="token parameter variable">-w</span> medium.txt <span class="token parameter variable">-x</span> php,html,txt
+</code></pre><hr>
+<h3 id="-lets-collaborate-on">🤝 Let’s Collaborate On </h3>
+<ul>
+<li>Open-source <strong>SIEM detection content</strong> (Splunk, Sigma)</li>
+<li><strong>Penetration testing tools</strong> &amp; <strong>exploit development</strong></li>
+<li><strong>OT security automation</strong> (IaC, Ansible, Python)</li>
+<li><strong>Threat intelligence platforms</strong> &amp; <strong>automated phishing triage</strong></li>
+</ul>
+<hr>
+<h3 id="-reach-me">📫 Reach Me </h3>
+<p><a href="https://twitter.com/e_oleghe"><code><img height="20" src="https://github.com/johan/svg-cleanups/blob/master/logos/twitter.svg"></code> Twitter (@e_oleghe)</a><br>
+📧 ewan.mails -{at}- gmail -|dot|- com<br>
+🔗 <a href="https://www.linkedin.com/in/ewan-o-8b9477108/">LinkedIn</a> | <a href="https://github.com/ewanoleghe">GitHub</a></p>
+<hr>
+<h3 id="-cybersecurity--tools-arsenal">🧰 Cybersecurity &amp; Tools Arsenal </h3>
+<p align="center">
+  <img src="https://cdn.iconscout.com/icon/free/png-512/aws-1869025-1583149.png" alt="AWS" height="25" style="margin:5px;">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" alt="Python" height="25" style="margin:5px;">
+  <img src="https://www.splunk.com/content/dam/splunk-blogs/images/2018/splunk-logo.png" alt="Splunk" height="25" style="margin:5px;">
+  <img src="https://learn.microsoft.com/en-us/media/illustrations/azure-sentinel-logo.png" alt="Microsoft Sentinel" height="25" style="margin:5px;">
+  <img src="https://cdn.iconscout.com/icon/free/png-256/carbon-black-3629003-3025589.png" alt="Carbon Black" height="25" style="margin:5px;">
+  <img src="https://cdn.icon-icons.com/icons2/2699/PNG/512/metasploit_logo_icon_168275.png" alt="Metasploit" height="25" style="margin:5px;">
+  <img src="https://portswigger.net/cms/images/01/4e/6b/7b/burp-suite-logo.png" alt="Burp Suite" height="25" style="margin:5px;">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6f/Nmap-logo.svg" alt="Nmap" height="25" style="margin:5px;">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Wireshark_icon.svg" alt="Wireshark" height="25" style="margin:5px;">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Docker_%28container_engine%29_logo.svg" alt="Docker" height="25" style="margin:5px;">
+  <img src="https://cdn.icon-icons.com/icons2/1381/PNG/512/kali-linux_89633.png" alt="Kali Linux" height="25" style="margin:5px;">
+</p>
 <hr>
 
       </div>

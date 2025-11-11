@@ -8,10 +8,11 @@ categories: ["Security", "Write-ups"]
 ---
 
 <nav style="text-align:right; font-size:0.9rem; margin-bottom:20px;">
-  <a href="https://github.com/ewanoleghe">Home</a> |
+  <a href="index.html"> Home</a> |
   <a href="/blog.html">Blog</a> |
   <a href="/contact.html">Contact</a> |
-  <a href="https://ewanoleghe.github.io/" target="_blank">Resume</a>
+  <a href="/resume.html" target="_blank">Resume</a>
+
 </nav>
 
 ---
