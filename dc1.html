@@ -1,0 +1,469 @@
+<!DOCTYPE html><html><head>
+      <title>Ewan - DC:1 Walkthrough</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="file:///c:\Users\Omen\.vscode\extensions\shd101wyy.markdown-preview-enhanced-0.8.20\crossnote\dependencies\katex\katex.min.css">
+      
+      
+      
+      
+      
+      <style>
+      code[class*=language-],pre[class*=language-]{color:#333;background:0 0;font-family:Consolas,"Liberation Mono",Menlo,Courier,monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.4;-moz-tab-size:8;-o-tab-size:8;tab-size:8;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none}pre[class*=language-]{padding:.8em;overflow:auto;border-radius:3px;background:#f5f5f5}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal;background:#f5f5f5}.token.blockquote,.token.comment{color:#969896}.token.cdata{color:#183691}.token.doctype,.token.macro.property,.token.punctuation,.token.variable{color:#333}.token.builtin,.token.important,.token.keyword,.token.operator,.token.rule{color:#a71d5d}.token.attr-value,.token.regex,.token.string,.token.url{color:#183691}.token.atrule,.token.boolean,.token.code,.token.command,.token.constant,.token.entity,.token.number,.token.property,.token.symbol{color:#0086b3}.token.prolog,.token.selector,.token.tag{color:#63a35c}.token.attr-name,.token.class,.token.class-name,.token.function,.token.id,.token.namespace,.token.pseudo-class,.token.pseudo-element,.token.url-reference .token.variable{color:#795da3}.token.entity{cursor:help}.token.title,.token.title .token.punctuation{font-weight:700;color:#1d3e81}.token.list{color:#ed6a43}.token.inserted{background-color:#eaffea;color:#55a532}.token.deleted{background-color:#ffecec;color:#bd2c00}.token.bold{font-weight:700}.token.italic{font-style:italic}.language-json .token.property{color:#183691}.language-markup .token.tag .token.punctuation{color:#333}.language-css .token.function,code.language-css{color:#0086b3}.language-yaml .token.atrule{color:#63a35c}code.language-yaml{color:#183691}.language-ruby .token.function{color:#333}.language-markdown .token.url{color:#795da3}.language-makefile .token.symbol{color:#795da3}.language-makefile .token.variable{color:#183691}.language-makefile .token.builtin{color:#0086b3}.language-bash .token.keyword{color:#0086b3}pre[data-line]{position:relative;padding:1em 0 1em 3em}pre[data-line] .line-highlight-wrapper{position:absolute;top:0;left:0;background-color:transparent;display:block;width:100%}pre[data-line] .line-highlight{position:absolute;left:0;right:0;padding:inherit 0;margin-top:1em;background:hsla(24,20%,50%,.08);background:linear-gradient(to right,hsla(24,20%,50%,.1) 70%,hsla(24,20%,50%,0));pointer-events:none;line-height:inherit;white-space:pre}pre[data-line] .line-highlight:before,pre[data-line] .line-highlight[data-end]:after{content:attr(data-start);position:absolute;top:.4em;left:.6em;min-width:1em;padding:0 .5em;background-color:hsla(24,20%,50%,.4);color:#f4f1ef;font:bold 65%/1.5 sans-serif;text-align:center;vertical-align:.3em;border-radius:999px;text-shadow:none;box-shadow:0 1px #fff}pre[data-line] .line-highlight[data-end]:after{content:attr(data-end);top:auto;bottom:.4em}html body{font-family:'Helvetica Neue',Helvetica,'Segoe UI',Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ol,html body>ul{margin-bottom:16px}html body ol,html body ul{padding-left:2em}html body ol.no-list,html body ul.no-list{padding:0;list-style-type:none}html body ol ol,html body ol ul,html body ul ol,html body ul ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:700;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:700}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::after,html body code::before{letter-spacing:-.2em;content:'\00a0'}html body pre>code{padding:0;margin:0;word-break:normal;white-space:pre;background:0 0;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:after,html body pre code:before,html body pre tt:after,html body pre tt:before{content:normal}html body blockquote,html body dl,html body ol,html body p,html body pre,html body ul{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body code,html body pre{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview ul{list-style:disc}.markdown-preview ul ul{list-style:circle}.markdown-preview ul ul ul{list-style:square}.markdown-preview ol{list-style:decimal}.markdown-preview ol ol,.markdown-preview ul ol{list-style-type:lower-roman}.markdown-preview ol ol ol,.markdown-preview ol ul ol,.markdown-preview ul ol ol,.markdown-preview ul ul ol{list-style-type:lower-alpha}.markdown-preview .newpage,.markdown-preview .pagebreak{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center!important}.markdown-preview:not([data-for=preview]) .code-chunk .code-chunk-btn-group{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .status{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .output-div{margin-bottom:16px}.markdown-preview .md-toc{padding:0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link div,.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}.markdown-preview .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0;min-height:100vh}@media screen and (min-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{font-size:14px!important;padding:1em}}@media print{html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc{padding:0 16px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link div,html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% - 300px);padding:2em calc(50% - 457px - 300px / 2);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+      </style>
+      <!-- The content below will be included at the end of the <head> element. --><script type="text/javascript">
+  document.addEventListener("DOMContentLoaded", function () {
+    // your code here
+  });
+</script></head><body for="html-export">
+    
+    
+      <div class="crossnote markdown-preview  ">
+      
+<nav style="text-align:right; font-size:0.9rem; margin-bottom:20px;">
+  <a href="https://github.com/ewanoleghe">Home</a> |
+  <a href="..\blog.html">Blog</a> |
+  <a href="..\contact.html">Contact</a> |
+  <a href="https://ewanoleghe.github.io/" target="_blank">Resume</a>
+</nav>
+<hr>
+<h1 id="dc1-walkthrough">DC:1 Walkthrough </h1>
+<p><em>Published on November 10, 2025 by <strong>Ewan Oleghe</strong>.</em></p>
+<hr>
+<h2 id="introduction">Introduction </h2>
+<p>I performed a full compromise of the <a href="https://www.vulnhub.com/entry/dc-1,292/" target="_blank">VulnHub <strong>DC-1</strong></a> machine as part of hands-on cybersecurity training and documented the methodologies, tools, and techniques used to root the system. The report emphasizes methodical reconnaissance, targeted exploitation, and post-exploitation analysis, with reproducible evidence and artifacts that a SOC analyst would rely on. Beyond demonstrating offensive capability, the write-up translates findings into actionable detection use-cases, hardening recommendations, and incident-response playbooks, showing my ability to both think like an attacker and design the telemetry and controls a Security Operations Center needs to detect and respond to similar threats.<br>
+.</p>
+<hr>
+<h3 id="set-up">Set up. </h3>
+<p>Before starting the enumeration, the DC-1 virtual machine was set up in my home lab using Kali Linux as the attacker machine. Both the Kali VM and the DC-1 target were connected via the Host-Only network in VirtualBox, which allows communication between the VMs without exposing them to the external network.</p>
+<h2 id="reconnaissance--enumeration">Reconnaissance / Enumeration </h2>
+<h3 id="nmap-scan">Nmap Scan. </h3>
+<p>With connectivity verified, Nmap was used for enumeration to identify open ports, services, and potential vulnerabilities on the DC-1 machine. Using targeted scanning options allowed for efficient information gathering without generating excessive network noise.</p>
+<ul>
+<li>Scan for open ports.</li>
+</ul>
+<pre data-role="codeBlock" data-info="bash" class="language-bash bash"><code><span class="token comment">### bash</span>
+<span class="token comment">### Nmap Scan</span>
+nmap <span class="token parameter variable">-T3</span> <span class="token parameter variable">-n</span> <span class="token parameter variable">-Pn</span> -p- <span class="token number">192.168</span>.78.101
+
+</code></pre><ul style="font-size:70%">
+  <li>-T3 : Timing template for moderate speed.</li>
+  <li>-n : Disables DNS resolution to reduce unnecessary traffic.</li>
+  <li>-Pn : Skips host discovery and treats the target as online.</li>
+  <li>-p- : Scans all 65,535 TCP ports, instead of a limited set.</li>
+</ul>
+<p><img src="image.png" alt="alt text"><br>
+A few ports are open: 22, 80, 111 and 33121</p>
+<h1></h1>
+<ul>
+<li>Scan open ports for OS-detection, and vulnerability.</li>
+</ul>
+<pre data-role="codeBlock" data-info="bash" class="language-bash bash"><code><span class="token comment">### bash</span>
+<span class="token comment">### Service &amp; script scan</span>
+nmap <span class="token parameter variable">-sV</span> <span class="token parameter variable">-sC</span> <span class="token parameter variable">-T3</span> <span class="token parameter variable">-n</span> <span class="token parameter variable">-Pn</span> -p22,80,111,33121 <span class="token number">192.168</span>.78.101
+
+<span class="token comment">### OS detection (optional, to reduce noise)</span>
+<span class="token function">sudo</span> nmap <span class="token parameter variable">-O</span> <span class="token parameter variable">-T3</span> <span class="token parameter variable">-n</span> <span class="token parameter variable">-Pn</span> <span class="token number">192.168</span>.78.101
+
+</code></pre><ul style="font-size:70%">
+  <li>-sV: Version detection — identifies software/service versions.</li>
+  <li>-sC	Runs Nmap’s default safe scripts (same as --script=default).</li>
+  <li>-p22,80,111,33121	Targets specific open ports found earlier.</li>
+  <li>-O:	OS detection.</li>
+</ul>
+<p><img src="image-1.png" alt="alt text"></p>
+<ul>
+<li><strong>Summary of Findings</strong></li>
+</ul>
+<p>The scan identified <strong>four open TCP ports (22, 80, 111, and 33121)</strong> running various services on the target. These services provide valuable entry points for further enumeration and potential exploitation.</p>
+<div style="font-size: 0.8em;">
+<table>
+<thead>
+<tr>
+<th>Port</th>
+<th>State</th>
+<th>Service</th>
+<th>Version</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>22/tcp</td>
+<td>open</td>
+<td>SSH</td>
+<td>OpenSSH 6.0p1 Debian 4+deb7u7</td>
+<td>Outdated SSH; may have known vulns (info disclosure, weak crypto). Host keys enumerated.</td>
+</tr>
+<tr>
+<td>80/tcp</td>
+<td>open</td>
+<td>HTTP</td>
+<td>Apache 2.2.22 (Debian)</td>
+<td>Runs Drupal 7. <code>/robots.txt</code> lists sensitive dirs (<code>/install.php</code>, <code>/cron.php</code>, <code>/CHANGELOG.txt</code>).</td>
+</tr>
+<tr>
+<td>111/tcp</td>
+<td>open</td>
+<td>RPCBind</td>
+<td>RPC 2–4</td>
+<td>RPC service; likely supports NFS or similar. Maps RPC to network ports.</td>
+</tr>
+<tr>
+<td>33121/tcp</td>
+<td>open</td>
+<td>status</td>
+<td>RPC #100024</td>
+<td><code>rpc.statd</code> (NFS status monitor). Useful for NFS or mountd enum.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h1></h1>
+<h2 id="vulnerability-analysis">Vulnerability Analysis </h2>
+<p>Web Service (Port 80)<br>
+The presence of Drupal 7 suggests the site may be running a known vulnerable CMS. Older Drupal installations (especially before 7.58) are affected by several critical vulnerabilities - including Drupalgeddon (CVE-2018-7600) which allows remote code execution.</p>
+<p>SSH Service (Port 22)<br>
+OpenSSH 6.0p1 is from Debian 7 (Wheezy), which is an end-of-life OS. This hints that the target may be outdated overall - a potential indicator of legacy vulnerabilities or default credentials.</p>
+<p>RPC &amp; Status Ports (111, 33121)<br>
+These ports indicate NFS-related services. Enumerating RPC can reveal exported file systems, which sometimes allow unauthorized access or sensitive file reads if misconfigured.</p>
+<h2 id="exploitation">Exploitation </h2>
+<ul>
+<li>The <strong>Drupal 7</strong> installation was identified as the most probable entry point due to known vulnerabilities and potentially insecure modules.</li>
+</ul>
+<p><img src="image-2.png" alt="alt text"></p>
+<ul>
+<li><strong>🧭 Attack Path</strong></li>
+</ul>
+<p>Metasploit modules were utilized to exploit unpatched software vulnerabilities, resulting in successful remote code execution and establishing an interactive <strong>Meterpreter session</strong> for controlled system access.</p>
+<p><img src="image-3.png" alt="alt text"></p>
+<ul style="font-size:70%">
+  <li>Load Metasploit to search for the ‘Drupalgeddon 2’ vulnerability</li>
+  <li>Selected 'unix/webapp/drupal_drupalgeddon2'.</li>
+  <li>
+    Show Options and set the RHOSTS &amp; LHOST
+    <ul>
+      <li><strong>RHOSTS</strong>: Remote host - IP address of the target host</li>
+      <li><strong>LHOST</strong>: Local Host - IP of your machine</li>
+    </ul>
+  </li>
+</ul>
+<p><img src="image-4.png" alt="alt text"></p>
+<ul style="font-size:70%">
+  <li>Ran the exploit</li>
+  <li>Meterpreter session established</li>
+</ul>
+<ul>
+<li><strong>Privilege Escalation &amp; Persistence</strong><br>
+Following the exploit a foothold was gained followed by spawning a TTY shell.</li>
+</ul>
+<p><img src="image-5.png" alt="alt text"></p>
+<ul style="font-size:70%">
+  <li>Python TTY was employed to upgrade Simple Shells to Fully Interactive TTYs</li>
+</ul>
+<h2 id="post-exploitation">Post-exploitation </h2>
+<p><strong>Explore the directory</strong></p>
+<pre data-role="codeBlock" data-info="bash" class="language-bash bash"><code><span class="token comment">### bash</span>
+www-data@DC-1:/var/w$ <span class="token operator">&gt;</span>  <span class="token function">ls</span> <span class="token parameter variable">-al</span>
+</code></pre><p><img src="image-6.png" alt="alt text"></p>
+<ul style="font-size:70%">
+  <li>Hint: The list 'files and directories' contains a flag1.txt that might hold some useful information</li>
+</ul>
+<p><strong>View Flag1.txt</strong></p>
+<pre data-role="codeBlock" data-info="bash" class="language-bash bash"><code><span class="token comment">### bash</span>
+www-data@DC-1:/var/www$ <span class="token operator">&gt;</span> <span class="token function">cat</span> flag1.txt
+</code></pre><p><img src="image-7.png" alt="alt text"></p>
+<ul style="font-size:70%">
+  <li>Hint: flag1.txt hints at a CMS config file. In Drupal the config file is 'sites/default/settings.php'</li>
+</ul>
+<p><strong>View settings.php</strong></p>
+<pre data-role="codeBlock" data-info="bash" class="language-bash bash"><code><span class="token comment">### bash</span>
+www-data@DC-1:/var/www$ <span class="token operator">&gt;</span> <span class="token function">cat</span> sites/default/settings.php
+</code></pre><p><img src="image-8.png" alt="alt text"></p>
+<ul style="font-size:70%">
+  <li>Hint: Exposed MySQL Database credentials in 'sites/default/settings.php'</li>
+</ul>
+<p><strong>Access the database with the credentials</strong></p>
+<pre data-role="codeBlock" data-info="bash" class="language-bash bash"><code><span class="token comment">### bash</span>
+www-data@DC-1:/var/www$ <span class="token operator">&gt;</span> mysql <span class="token parameter variable">-u</span> dbuser -p<span class="token string">'R0ck3t'</span> <span class="token parameter variable">-h</span> localhost drupaldb
+</code></pre><p><img src="image-9.png" alt="alt text"></p>
+<ul style="font-size:70%">
+  <li>Hint: Database access, lets enumerate further</li>
+  <li>1: Show all the tables</li>
+  <li>2: Database access, lets enumerate further</li>
+</ul>
+<p><strong>Show all tables</strong></p>
+<pre data-role="codeBlock" data-info="bash" class="language-bash bash"><code><span class="token comment">### bash</span>
+mysql<span class="token operator">&gt;</span> SHOW TABLES<span class="token punctuation">;</span>
+</code></pre><p><img src="image-10.png" alt="alt text"><br>
+<img src="image-12.png" alt="alt text"></p>
+<ul style="font-size:70%">
+  <li>The Tables list holds a 'users' table </li>
+</ul>
+<p>**Explore 'users' Table</p>
+<pre data-role="codeBlock" data-info="bash" class="language-bash bash"><code><span class="token comment">### bash</span>
+mysql<span class="token operator">&gt;</span> SELECT * FROM <span class="token function">users</span><span class="token punctuation">;</span>
+</code></pre><p><img src="image-13.png" alt="alt text"></p>
+<ul style="font-size:70%">
+  <li>The 'users' returned 3 rows with 2 users data and hash passwords </li>
+</ul>
+<p><strong>Export the Hash and use John the Ripper to Crack the hash</strong></p>
+<pre data-role="codeBlock" data-info="bash" class="language-bash bash"><code><span class="token comment">### bash</span>
+
+<span class="token comment">### Export the hash to a file</span>
+<span class="token builtin class-name">echo</span> <span class="token string">'admin:$S$DvQI6Y600iNeXRIeEMF94Y6FvN8nujJcEDTCP9nS5.i38jnEKuDR'</span> <span class="token operator">&gt;&gt;</span> hashes.txt
+<span class="token builtin class-name">echo</span> <span class="token string">'Fred:$S$DWGrxef6.D0cwB5Ts.GlnLw15chRRWH2s1R3QBwC0EkvBQ/9TCGg'</span> <span class="token operator">&gt;&gt;</span> hashes.txt
+
+<span class="token comment">### View file</span>
+<span class="token function">cat</span> hashes.txt
+</code></pre><ul style="font-size:70%">
+  <li>You can also use 'hashcat' to crack the hashes </li>
+</ul>
+<p><strong>Use john to crack the hash</strong></p>
+<pre data-role="codeBlock" data-info="bash" class="language-bash bash"><code><span class="token comment">### bash</span>
+john <span class="token parameter variable">--wordlist</span><span class="token operator">=</span>password.lst <span class="token parameter variable">--rules</span> <span class="token function">passwd</span>
+</code></pre><p><img src="image-14.png" alt="alt text"></p>
+<hr>
+<p><strong>Use Credentials</strong><br>
+Using the credentials admin / 53cr3t, I obtained administrative access to the Drupal interface. No upload vulnerabilities were identified. A post referencing flag3 indicated the presence of additional sensitive information requiring further investigation. Fred account yielded no meaningful findings during post-exploitation enumeration.</p>
+<p><img src="image-15.png" alt="alt text"></p>
+<hr>
+<p><strong>Privilege escalation</strong></p>
+<ul>
+<li><em><strong>Find SUID files</strong></em></li>
+</ul>
+<pre data-role="codeBlock" data-info="bash" class="language-bash bash"><code><span class="token comment">### bash</span>
+<span class="token function">find</span> / <span class="token parameter variable">-perm</span> <span class="token parameter variable">-4000</span> <span class="token parameter variable">-type</span> f <span class="token operator"><span class="token file-descriptor important">2</span>&gt;</span>/dev/null
+</code></pre><p><img src="image-16.png" alt="alt text"></p>
+<ul style="font-size:70%">
+  <li>The command output revealed several SUID-enabled binaries, including /usr/bin/find, which was of particular interest.</li>
+  <li>This command
+        <ul>
+            <li>Searches the entire filesystem (/) for files with the SUID permission bit set (-perm -4000).</li>
+            <li>Redirects error messages (like "Permission denied") to /dev/null to keep the output clean (2&gt;/dev/null).</li>
+        </ul>
+   </li>
+</ul>
+<p>The find binary was found to have the SUID bit set, allowing it to execute with elevated privileges (root) regardless of the invoking user’s permissions.</p>
+<p>According to GTFOBins, find can be abused to execute arbitrary commands with elevated privileges when misconfigured in this way.</p>
+<p>Using the guidance from GTFOBins, the following command was executed to spawn a root shell: (If it is used to run sh -p, omit the -p argument on systems like Debian (&lt;= Stretch) that allow the default sh shell to run with SUID privileges.)</p>
+<pre data-role="codeBlock" data-info="bash" class="language-bash bash"><code><span class="token comment">### bash</span>
+/usr/bin/find / <span class="token parameter variable">-exec</span> /bin/sh <span class="token punctuation">\</span><span class="token punctuation">;</span> <span class="token parameter variable">-quit</span>
+</code></pre><p><img src="image-17.png" alt="alt text"></p>
+<p>*Priviledge escaleted to root !</p>
+<p><strong>Credential harvesting</strong></p>
+<ul>
+<li><em><strong>Explore  directory &amp; files</strong></em></li>
+</ul>
+<pre data-role="codeBlock" data-info="bash" class="language-bash bash"><code><span class="token comment">### bash</span>
+<span class="token function">ls</span> <span class="token parameter variable">-al</span>
+</code></pre><p><img src="image-18.png" alt="alt text"></p>
+<ul style="font-size:70%">
+  <li>Escalated to root
+  </li><li>Directory &amp; files listing has 'thefinalflag.txt' </li>
+</ul>
+<p>*View the file content 'thefinalflag.tx'</p>
+<pre data-role="codeBlock" data-info="bash" class="language-bash bash"><code><span class="token comment">### bash</span>
+<span class="token function">cat</span> thefinalflag.txt
+</code></pre><p><img src="image-19.png" alt="alt text"></p>
+<hr>
+<h3 id="reporting--remediation">Reporting &amp; Remediation </h3>
+<h5 id="-attack-path-high-level">🧭 Attack Path (High-Level) </h5>
+<ul>
+<li>
+<p><strong>Footprinting</strong><br>
+Nmap enumeration revealed <strong>Drupal</strong> running on HTTP along with exposed <strong>RPC services</strong>.<br>
+The <code>robots.txt</code> file and publicly accessible directories leaked version information and sensitive files.</p>
+</li>
+<li>
+<p><strong>Targeting the Web Application</strong><br>
+The <strong>Drupal 7</strong> installation was identified as the most probable entry point due to known vulnerabilities and potentially insecure modules.</p>
+</li>
+<li>
+<p><strong>Privilege Escalation &amp; Persistence</strong><br>
+After achieving remote code execution (in a controlled lab environment), a shell was obtained and privilege escalation to <strong>root</strong> was performed.<br>
+Sensitive files such as <code>settings.php</code> were accessed, revealing database credentials.</p>
+</li>
+<li>
+<p><strong>Lateral Movement &amp; Data Access</strong><br>
+The recovered <strong>database credentials</strong> allowed direct access to the Drupal database, demonstrating how credential leakage can enable deeper compromise.</p>
+</li>
+</ul>
+<hr>
+<h5 id="️-impact--risk">⚠️ Impact &amp; Risk </h5>
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th>Impact Level</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Confidentiality</strong></td>
+<td>🔴 High</td>
+<td>Exposed database credentials could lead to data exfiltration.</td>
+</tr>
+<tr>
+<td><strong>Integrity</strong></td>
+<td>🔴 High</td>
+<td>Webshell/root access allows tampering with site files, database, or content.</td>
+</tr>
+<tr>
+<td><strong>Availability</strong></td>
+<td>🔴 High</td>
+<td>Attacker could stop services, delete backups, or cause downtime.</td>
+</tr>
+<tr>
+<td><strong>Business Impact</strong></td>
+<td>🔴 High</td>
+<td>A real-world breach could cause data loss, regulatory exposure, and reputational damage.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h5 id="️-remediation--prioritized-action-plan">🛠️ Remediation &amp; Prioritized Action Plan </h5>
+<ul>
+<li>
+<h4>🧩 Isolate / Contain</h4>
+</li>
+<li>
+<p>Disconnect or firewall the host if compromise is suspected.</p>
+</li>
+<li>
+<p>Preserve forensic evidence (logs, disk snapshots) before changes.</p>
+</li>
+<li>
+<h4>🔑 Rotate Exposed Credentials</h4>
+</li>
+<li>
+<p>Change <strong>database credentials</strong> in <code>sites/default/settings.php</code>.</p>
+</li>
+<li>
+<p>Create a new DB user/password and update Drupal config.</p>
+</li>
+<li>
+<p>Rotate any other potentially compromised secrets (SSH keys, API keys).</p>
+</li>
+<li>
+<h4>🗑️ Remove Sensitive Files from Webroot</h4>
+</li>
+<li>
+<p>Delete or relocate files like <code>CHANGELOG.txt</code>, <code>INSTALL*.txt</code>, and <code>MAINTAINERS.txt</code> that reveal version info.</p>
+</li>
+<li>
+<h4>🚫 Disable Unnecessary Services</h4>
+</li>
+<li>
+<p>Stop/disable <code>rpcbind</code> or <code>NFS</code> if not required.</p>
+</li>
+<li>
+<p>Restrict their bindings to internal interfaces only.</p>
+</li>
+</ul>
+<hr>
+<ul>
+<li>
+<h4>🧱 Patch and Upgrade</h4>
+</li>
+<li>
+<p>Update <strong>Drupal core</strong> and all modules to supported versions.</p>
+</li>
+<li>
+<p>Upgrade <strong>Apache (≥2.4)</strong>, <strong>PHP</strong>, and <strong>MySQL</strong> to current releases.</p>
+</li>
+<li>
+<h4>🔐 Harden SSH</h4>
+</li>
+<li>
+<p>Replace <strong>DSA</strong> host key with <strong>ED25519</strong> or <strong>RSA-4096</strong>.</p>
+</li>
+<li>
+<p>Disable password login and root SSH access.</p>
+</li>
+<li>
+<p>Restrict SSH via firewall to administrative IPs.</p>
+</li>
+<li>
+<h4>🌐 Harden Web Server &amp; PHP</h4>
+</li>
+<li>
+<p>Disable directory listing and <code>expose_php</code>.</p>
+</li>
+<li>
+<p>Hide errors in production (<code>display_errors = Off</code>).</p>
+</li>
+<li>
+<p>Set strict file permissions:</p>
+<ul>
+<li><code>settings.php</code>: <code>440</code> (readable by owner only)</li>
+<li><code>files/</code> directory: writable by web user only.</li>
+</ul>
+</li>
+<li>
+<h4>🛡️ Install Protections</h4>
+</li>
+<li>
+<p>Deploy a <strong>Web Application Firewall (WAF)</strong> (e.g., <em>ModSecurity + OWASP CRS</em>).</p>
+</li>
+<li>
+<p>Use <strong>fail2ban</strong> or similar for brute-force protection.</p>
+</li>
+</ul>
+<hr>
+<ul>
+<li>
+<h4>🧰 Rebuild if Compromise Confirmed</h4>
+</li>
+<li>
+<p>If root-level access occurred, rebuild from <strong>trusted images</strong>.</p>
+</li>
+<li>
+<p>Restore from verified <strong>clean backups</strong>.</p>
+</li>
+<li>
+<p>Rotate all credentials and SSH keys after rebuild.</p>
+</li>
+<li>
+<h4>📊 Logging &amp; Monitoring</h4>
+</li>
+<li>
+<p>Centralize and monitor logs with alerts (SIEM, IDS/IPS).</p>
+</li>
+<li>
+<p>Deploy <strong>AIDE</strong> or similar for integrity monitoring.</p>
+</li>
+<li>
+<p>Schedule periodic vulnerability scans.</p>
+</li>
+<li>
+<h4>🔒 Least Privilege &amp; Secrets Management</h4>
+</li>
+<li>
+<p>Restrict DB user privileges to <strong>minimum necessary</strong>.</p>
+</li>
+<li>
+<p>Move credentials out of webroot — use <strong>environment variables</strong> or a <strong>secrets manager</strong>.</p>
+</li>
+</ul>
+<hr>
+<h5 id="-lessons-learned">🧠 Lessons Learned </h5>
+<p>This exercise reinforced the importance of thorough enumeration, understanding vulnerability chains, and applying defense-in-depth principles.<br>
+Even minor misconfigurations - such as version files in webroot, outdated software, or plaintext credentials -  combined and allowed full compromise.</p>
+
+      </div>
+      
+      
+    
+    
+    
+    
+    
+    
+  
+    </body></html>
