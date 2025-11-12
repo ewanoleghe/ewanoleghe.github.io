@@ -204,12 +204,12 @@ mysql<span class="token operator">&gt;</span> SHOW TABLES<span class="token punc
 <ul style="font-size:70%">
   <li>The Tables list holds a 'users' table </li>
 </ul>
-<p>**Explore 'users' Table</p>
+<p>**Explore '<strong>users</strong>' Table</p>
 <pre data-role="codeBlock" data-info="bash" class="language-bash bash"><code><span class="token comment">### bash</span>
 mysql<span class="token operator">&gt;</span> SELECT * FROM <span class="token function">users</span><span class="token punctuation">;</span>
 </code></pre><p><img src="image-13.png" alt="alt text"></p>
 <ul style="font-size:70%">
-  <li>The 'users' returned 3 rows with 2 users data and hash passwords </li>
+  <li>The '**users**' returned 3 rows with 2 users data and hash passwords </li>
 </ul>
 <p><strong>Export the Hash and use John the Ripper to Crack the hash</strong></p>
 <pre data-role="codeBlock" data-info="bash" class="language-bash bash"><code><span class="token comment">### bash</span>
@@ -229,7 +229,7 @@ john <span class="token parameter variable">--wordlist</span><span class="token 
 </code></pre><p><img src="image-14.png" alt="alt text"></p>
 <hr>
 <p><strong>Use Credentials</strong><br>
-Using the credentials admin / 53cr3t, I obtained administrative access to the Drupal interface. No upload vulnerabilities were identified. A post referencing flag3 indicated the presence of additional sensitive information requiring further investigation. Fred account yielded no meaningful findings during post-exploitation enumeration.</p>
+Using the credentials <strong>admin</strong> / <strong>53cr3t</strong>  I obtained administrative access to the Drupal interface. No upload vulnerabilities were identified. A post referencing flag3 indicated the presence of additional sensitive information requiring further investigation. Fred account yielded no meaningful findings during post-exploitation enumeration.</p>
 <p><img src="image-15.png" alt="alt text"></p>
 <hr>
 <p><strong>Privilege escalation</strong></p>
@@ -448,13 +448,13 @@ The recovered <strong>database credentials</strong> allowed direct access to the
 <p>Restrict DB user privileges to <strong>minimum necessary</strong>.</p>
 </li>
 <li>
-<p>Move credentials out of webroot — use <strong>environment variables</strong> or a <strong>secrets manager</strong>.</p>
+<p>Move credentials out of webroot, use <strong>environment variables</strong> or a <strong>secrets manager</strong>.</p>
 </li>
 </ul>
 <hr>
 <h5 id="lessons-learned">Lessons Learned </h5>
 <p>This exercise reinforced the importance of thorough enumeration, understanding vulnerability chains, and applying defense-in-depth principles.<br>
-Even minor misconfigurations - such as version files in webroot, outdated software, or plaintext credentials -  combined and allowed full compromise.</p>
+Even minor misconfigurations, such as version files in webroot, outdated software, or plaintext credentials -  combined and allowed full compromise.</p>
 
       </div>
       
