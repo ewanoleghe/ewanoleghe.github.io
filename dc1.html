@@ -137,7 +137,7 @@ These ports indicate NFS-related services. Enumerating RPC can reveal exported f
 </ul>
 <p><img src="image-2.png" alt="alt text"></p>
 <ul>
-<li><strong>🧭 Attack Path</strong></li>
+<li><strong>Attack Path</strong></li>
 </ul>
 <p>Metasploit modules were utilized to exploit unpatched software vulnerabilities, resulting in successful remote code execution and establishing an interactive <strong>Meterpreter session</strong> for controlled system access.</p>
 <p><img src="image-3.png" alt="alt text"></p>
@@ -272,7 +272,7 @@ Using the credentials admin / 53cr3t, I obtained administrative access to the Dr
 </code></pre><p><img src="image-19.png" alt="alt text"></p>
 <hr>
 <h3 id="reporting--remediation">Reporting &amp; Remediation </h3>
-<h5 id="-attack-path-high-level">🧭 Attack Path (High-Level) </h5>
+<h5 id="attack-path-high-level">Attack Path (High-Level) </h5>
 <ul>
 <li>
 <p><strong>Footprinting</strong><br>
@@ -294,7 +294,7 @@ The recovered <strong>database credentials</strong> allowed direct access to the
 </li>
 </ul>
 <hr>
-<h5 id="️-impact--risk">⚠️ Impact &amp; Risk </h5>
+<h5 id="impact--risk">Impact &amp; Risk </h5>
 <table>
 <thead>
 <tr>
@@ -306,31 +306,31 @@ The recovered <strong>database credentials</strong> allowed direct access to the
 <tbody>
 <tr>
 <td><strong>Confidentiality</strong></td>
-<td>🔴 High</td>
+<td>High</td>
 <td>Exposed database credentials could lead to data exfiltration.</td>
 </tr>
 <tr>
 <td><strong>Integrity</strong></td>
-<td>🔴 High</td>
+<td>High</td>
 <td>Webshell/root access allows tampering with site files, database, or content.</td>
 </tr>
 <tr>
 <td><strong>Availability</strong></td>
-<td>🔴 High</td>
+<td>High</td>
 <td>Attacker could stop services, delete backups, or cause downtime.</td>
 </tr>
 <tr>
 <td><strong>Business Impact</strong></td>
-<td>🔴 High</td>
+<td>High</td>
 <td>A real-world breach could cause data loss, regulatory exposure, and reputational damage.</td>
 </tr>
 </tbody>
 </table>
 <hr>
-<h5 id="️-remediation--prioritized-action-plan">🛠️ Remediation &amp; Prioritized Action Plan </h5>
+<h5 id="remediation--prioritized-action-plan">Remediation &amp; Prioritized Action Plan </h5>
 <ul>
 <li>
-<h4>🧩 Isolate / Contain</h4>
+<h4>Isolate / Contain</h4>
 </li>
 <li>
 <p>Disconnect or firewall the host if compromise is suspected.</p>
@@ -339,7 +339,7 @@ The recovered <strong>database credentials</strong> allowed direct access to the
 <p>Preserve forensic evidence (logs, disk snapshots) before changes.</p>
 </li>
 <li>
-<h4>🔑 Rotate Exposed Credentials</h4>
+<h4>Rotate Exposed Credentials</h4>
 </li>
 <li>
 <p>Change <strong>database credentials</strong> in <code>sites/default/settings.php</code>.</p>
@@ -351,13 +351,13 @@ The recovered <strong>database credentials</strong> allowed direct access to the
 <p>Rotate any other potentially compromised secrets (SSH keys, API keys).</p>
 </li>
 <li>
-<h4>🗑️ Remove Sensitive Files from Webroot</h4>
+<h4>Remove Sensitive Files from Webroot</h4>
 </li>
 <li>
 <p>Delete or relocate files like <code>CHANGELOG.txt</code>, <code>INSTALL*.txt</code>, and <code>MAINTAINERS.txt</code> that reveal version info.</p>
 </li>
 <li>
-<h4>🚫 Disable Unnecessary Services</h4>
+<h4>Disable Unnecessary Services</h4>
 </li>
 <li>
 <p>Stop/disable <code>rpcbind</code> or <code>NFS</code> if not required.</p>
@@ -369,7 +369,7 @@ The recovered <strong>database credentials</strong> allowed direct access to the
 <hr>
 <ul>
 <li>
-<h4>🧱 Patch and Upgrade</h4>
+<h4>Patch and Upgrade</h4>
 </li>
 <li>
 <p>Update <strong>Drupal core</strong> and all modules to supported versions.</p>
@@ -378,7 +378,7 @@ The recovered <strong>database credentials</strong> allowed direct access to the
 <p>Upgrade <strong>Apache (≥2.4)</strong>, <strong>PHP</strong>, and <strong>MySQL</strong> to current releases.</p>
 </li>
 <li>
-<h4>🔐 Harden SSH</h4>
+<h4>Harden SSH</h4>
 </li>
 <li>
 <p>Replace <strong>DSA</strong> host key with <strong>ED25519</strong> or <strong>RSA-4096</strong>.</p>
@@ -390,7 +390,7 @@ The recovered <strong>database credentials</strong> allowed direct access to the
 <p>Restrict SSH via firewall to administrative IPs.</p>
 </li>
 <li>
-<h4>🌐 Harden Web Server &amp; PHP</h4>
+<h4>Harden Web Server &amp; PHP</h4>
 </li>
 <li>
 <p>Disable directory listing and <code>expose_php</code>.</p>
@@ -406,7 +406,7 @@ The recovered <strong>database credentials</strong> allowed direct access to the
 </ul>
 </li>
 <li>
-<h4>🛡️ Install Protections</h4>
+<h4>Install Protections</h4>
 </li>
 <li>
 <p>Deploy a <strong>Web Application Firewall (WAF)</strong> (e.g., <em>ModSecurity + OWASP CRS</em>).</p>
@@ -418,7 +418,7 @@ The recovered <strong>database credentials</strong> allowed direct access to the
 <hr>
 <ul>
 <li>
-<h4>🧰 Rebuild if Compromise Confirmed</h4>
+<h4>Rebuild if Compromise Confirmed</h4>
 </li>
 <li>
 <p>If root-level access occurred, rebuild from <strong>trusted images</strong>.</p>
@@ -430,7 +430,7 @@ The recovered <strong>database credentials</strong> allowed direct access to the
 <p>Rotate all credentials and SSH keys after rebuild.</p>
 </li>
 <li>
-<h4>📊 Logging &amp; Monitoring</h4>
+<h4>Logging &amp; Monitoring</h4>
 </li>
 <li>
 <p>Centralize and monitor logs with alerts (SIEM, IDS/IPS).</p>
@@ -442,7 +442,7 @@ The recovered <strong>database credentials</strong> allowed direct access to the
 <p>Schedule periodic vulnerability scans.</p>
 </li>
 <li>
-<h4>🔒 Least Privilege &amp; Secrets Management</h4>
+<h4>Least Privilege &amp; Secrets Management</h4>
 </li>
 <li>
 <p>Restrict DB user privileges to <strong>minimum necessary</strong>.</p>
@@ -452,7 +452,7 @@ The recovered <strong>database credentials</strong> allowed direct access to the
 </li>
 </ul>
 <hr>
-<h5 id="-lessons-learned">🧠 Lessons Learned </h5>
+<h5 id="lessons-learned">Lessons Learned </h5>
 <p>This exercise reinforced the importance of thorough enumeration, understanding vulnerability chains, and applying defense-in-depth principles.<br>
 Even minor misconfigurations - such as version files in webroot, outdated software, or plaintext credentials -  combined and allowed full compromise.</p>
 
