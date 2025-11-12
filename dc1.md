@@ -108,7 +108,7 @@ These ports indicate NFS-related services. Enumerating RPC can reveal exported f
   
 ![alt text](image-2.png)
 
-- **🧭 Attack Path**
+- **Attack Path**
 
 Metasploit modules were utilized to exploit unpatched software vulnerabilities, resulting in successful remote code execution and establishing an interactive **Meterpreter session** for controlled system access.
 
@@ -198,7 +198,7 @@ mysql> SHOW TABLES;
   <li>The Tables list holds a 'users' table </li>
 </ul>
 
-**Explore 'users' Table
+**Explore '**users**' Table
 ```bash
 ### bash
 mysql> SELECT * FROM users;
@@ -206,7 +206,7 @@ mysql> SELECT * FROM users;
 ![alt text](image-13.png)
 
 <ul style="font-size:70%">
-  <li>The 'users' returned 3 rows with 2 users data and hash passwords </li>
+  <li>The '**users**' returned 3 rows with 2 users data and hash passwords </li>
 </ul>
 
 **Export the Hash and use John the Ripper to Crack the hash**
@@ -234,7 +234,7 @@ john --wordlist=password.lst --rules passwd
 ---
 
 **Use Credentials**
-Using the credentials admin / 53cr3t, I obtained administrative access to the Drupal interface. No upload vulnerabilities were identified. A post referencing flag3 indicated the presence of additional sensitive information requiring further investigation. Fred account yielded no meaningful findings during post-exploitation enumeration.
+Using the credentials **admin** / **53cr3t**  I obtained administrative access to the Drupal interface. No upload vulnerabilities were identified. A post referencing flag3 indicated the presence of additional sensitive information requiring further investigation. Fred account yielded no meaningful findings during post-exploitation enumeration.
 
 ![alt text](image-15.png)
 
@@ -295,7 +295,7 @@ cat thefinalflag.txt
 
 ---
 ### Reporting & Remediation
-##### 🧭 Attack Path (High-Level)
+#####  Attack Path (High-Level)
 
 - **Footprinting**
 Nmap enumeration revealed **Drupal** running on HTTP along with exposed **RPC services**.  
@@ -316,78 +316,78 @@ The recovered **database credentials** allowed direct access to the Drupal datab
 
 ---
 
-##### ⚠️ Impact & Risk 
+#####  Impact & Risk 
 
 | Category | Impact Level | Description |
 |-----------|---------------|--------------|
-| **Confidentiality** | 🔴 High | Exposed database credentials could lead to data exfiltration. |
-| **Integrity** | 🔴 High | Webshell/root access allows tampering with site files, database, or content. |
-| **Availability** | 🔴 High | Attacker could stop services, delete backups, or cause downtime. |
-| **Business Impact** | 🔴 High | A real-world breach could cause data loss, regulatory exposure, and reputational damage. |
+| **Confidentiality** |  High | Exposed database credentials could lead to data exfiltration. |
+| **Integrity** |  High | Webshell/root access allows tampering with site files, database, or content. |
+| **Availability** |  High | Attacker could stop services, delete backups, or cause downtime. |
+| **Business Impact** |  High | A real-world breach could cause data loss, regulatory exposure, and reputational damage. |
 
 ---
 
-##### 🛠️ Remediation & Prioritized Action Plan
+#####  Remediation & Prioritized Action Plan
 
-- #### 🧩 Isolate / Contain
+- ####  Isolate / Contain
 - Disconnect or firewall the host if compromise is suspected.  
 - Preserve forensic evidence (logs, disk snapshots) before changes.
 
-- #### 🔑 Rotate Exposed Credentials
+- ####  Rotate Exposed Credentials
 - Change **database credentials** in `sites/default/settings.php`.  
 - Create a new DB user/password and update Drupal config.  
 - Rotate any other potentially compromised secrets (SSH keys, API keys).
 
-- #### 🗑️ Remove Sensitive Files from Webroot
+- ####  Remove Sensitive Files from Webroot
 - Delete or relocate files like `CHANGELOG.txt`, `INSTALL*.txt`, and `MAINTAINERS.txt` that reveal version info.
 
-- #### 🚫 Disable Unnecessary Services
+- ####  Disable Unnecessary Services
 - Stop/disable `rpcbind` or `NFS` if not required.  
 - Restrict their bindings to internal interfaces only.
 
 ---
 
-- #### 🧱 Patch and Upgrade
+- ####  Patch and Upgrade
 - Update **Drupal core** and all modules to supported versions.  
 - Upgrade **Apache (≥2.4)**, **PHP**, and **MySQL** to current releases.
 
-- #### 🔐 Harden SSH
+- ####  Harden SSH
 - Replace **DSA** host key with **ED25519** or **RSA-4096**.  
 - Disable password login and root SSH access.  
 - Restrict SSH via firewall to administrative IPs.
 
-- #### 🌐 Harden Web Server & PHP
+- ####  Harden Web Server & PHP
 - Disable directory listing and `expose_php`.  
 - Hide errors in production (`display_errors = Off`).  
 - Set strict file permissions:  
   - `settings.php`: `440` (readable by owner only)  
   - `files/` directory: writable by web user only.
 
-- #### 🛡️ Install Protections
+- ####  Install Protections
 - Deploy a **Web Application Firewall (WAF)** (e.g., *ModSecurity + OWASP CRS*).  
 - Use **fail2ban** or similar for brute-force protection.
 
 ---
 
-- #### 🧰 Rebuild if Compromise Confirmed
+- ####  Rebuild if Compromise Confirmed
 - If root-level access occurred, rebuild from **trusted images**.  
 - Restore from verified **clean backups**.  
 - Rotate all credentials and SSH keys after rebuild.
 
-- #### 📊 Logging & Monitoring
+- ####  Logging & Monitoring
 - Centralize and monitor logs with alerts (SIEM, IDS/IPS).  
 - Deploy **AIDE** or similar for integrity monitoring.  
 - Schedule periodic vulnerability scans.
 
-- #### 🔒 Least Privilege & Secrets Management
+- ####  Least Privilege & Secrets Management
 - Restrict DB user privileges to **minimum necessary**.  
-- Move credentials out of webroot — use **environment variables** or a **secrets manager**.
+- Move credentials out of webroot, use **environment variables** or a **secrets manager**.
 
 ---
 
-##### 🧠 Lessons Learned
+#####  Lessons Learned
 
 This exercise reinforced the importance of thorough enumeration, understanding vulnerability chains, and applying defense-in-depth principles.  
-Even minor misconfigurations - such as version files in webroot, outdated software, or plaintext credentials -  combined and allowed full compromise.
+Even minor misconfigurations, such as version files in webroot, outdated software, or plaintext credentials -  combined and allowed full compromise.
 
 
