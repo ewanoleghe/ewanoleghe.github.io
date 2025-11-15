@@ -22,6 +22,9 @@ Welcome to the blog! Here are all the latest posts:
 
 ## Latest Posts
 
+- [Vulnhub: Mr. Robot Walkthrough](robot.html)
+  *Published on November 14, 2025*
+
 - [DC:1 Walkthrough](dc1.html)
   *Published on November 10, 2025*
 
