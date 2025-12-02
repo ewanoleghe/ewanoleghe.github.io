@@ -187,7 +187,7 @@ From your local machine. Use CMD or PowerShell to ping the VM. We have to make s
 ```powershell
 ping -n 6 20.64.238.22
 ```
-Pings the VM 6 times
+Pings the VM and a total of 6 packets sent and received
 
 ![alt text](image-7.png)
 
