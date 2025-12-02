@@ -1,6 +1,6 @@
 ---
 title: "Ewan - DC:1 Walkthrough"
-date: 11-09-2025
+date: 2025-11-09
 author: "Ewan O."
 description: "DC-1 is a purposely built vulnerable lab for the purpose of gaining experience in the world of penetration testing."
 tags: ["write-up", "CTF", "pentesting", "VM"]
@@ -21,6 +21,9 @@ categories: ["Security", "Write-ups"]
 Welcome to the blog! Here are all the latest posts:
 
 ## Latest Posts
+
+- [AZURE: Microsoft Sentinel Honeypot & Attack Monitoring Lab](blog/honeypot_azure/honeypot.html)
+  *Published on December 01, 2025*
 
 - [Vulnhub: Mr. Robot Walkthrough](robot.html)
   *Published on November 14, 2025*
