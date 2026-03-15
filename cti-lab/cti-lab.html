@@ -1,6 +1,9 @@
-<!DOCTYPE html><html lang="en"><head>
-      <title>Ewan - DC:1 Walkthrough</title>
-      <meta charset="utf-8">
+<!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <title>CTI-Lab&colon; From Information Overload to Actionable Threat Intelligence</title>
+            <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       
       <link rel="stylesheet" href="file:///c:\Users\Omen\.vscode\extensions\shd101wyy.markdown-preview-enhanced-0.8.20\crossnote\dependencies\katex\katex.min.css">
@@ -31,41 +34,180 @@
   <a href="..\resume.html" target="_blank">Resume</a>
 </nav>
 <hr>
-<h1 id="blog-posts">Blog Posts </h1>
-<p>Welcome to the blog! Here are all the latest posts:</p>
-<h2 id="latest-posts">Latest Posts </h2>
+<h1 id="cti-lab-from-information-overload-to-actionable-threat-intelligence">CTI-Lab: From Information Overload to Actionable Threat Intelligence</h1>
+<p>In today’s fast-paced digital world, cyber threats don’t wait — they evolve constantly. Ransomware campaigns, credential leaks, phishing kits, domain impersonation, and zero-day exploits appear daily. For security professionals, researchers, and organizations, the challenge isn’t finding data — it’s <strong>turning noise into signal</strong>.</p>
+<p>For months I lived in tab chaos: RSS readers, Shodan searches, Have I Been Pwned lookups, NVD feeds, paste sites, and threat blogs. I wanted one place that:</p>
+<ul>
+<li>Automatically collected fresh intelligence 24/7</li>
+<li>Filtered global threats and highlighted risks to <em>my</em> organization</li>
+<li>Provided context (severity, MITRE mapping, enrichment)</li>
+<li>Offered a clean, modern dashboard I could actually use daily</li>
+</ul>
+<p>So I built <strong>CTI-Lab</strong> — a complete, self-hosted Cyber Threat Intelligence dashboard that runs locally on my machine.</p>
+<p>This is the story of why it exists, how it works, and how it can help you too.</p>
+<h2 id="why-i-built-cti-lab">Why I Built CTI-Lab</h2>
+<p>Most existing tools suffer from one or more of these problems:</p>
+<ul>
+<li>Too much noise — global feeds bury company-relevant alerts</li>
+<li>No persistence — close the tab and the intel is gone</li>
+<li>Manual effort — daily checking is exhausting and error-prone</li>
+<li>Lack of focus — little filtering for brand/domain/email risks</li>
+<li>Fragmented views — no single pane for global + targeted intelligence</li>
+</ul>
+<p>I wanted a system that:</p>
+<ul>
+<li>Ran autonomously</li>
+<li>Combined global and company-specific monitoring</li>
+<li>Enriched data automatically (CVSS, CVE, MITRE tags)</li>
+<li>Looked good and felt fast</li>
+</ul>
+<p>CTI-Lab solves exactly that.</p>
+<p><img src="file:///c:\Users\Omen\OneDrive\Cyber Security\Git Website__n__MarkDown\cti-lab\image-lab\global.png" alt="CTI-Lab Global View"><br>
+<em>Global threat feed with enriched CVE/CVSS data</em></p>
+<h2 id="architecture-at-a-glance">Architecture at a Glance</h2>
+<p>CTI-Lab is a full-stack application with three clean layers:</p>
 <ul>
 <li>
-<p><a href="blog/cti-lab/cti-lab.html">CTI-Lab: From Information Overload to Actionable Threat Intelligence</a><br>
-<em>Published on March 15, 2026</em></p>
+<p><strong>Collector</strong> (<code>app/collector.py</code>)<br>
+Runs every 2 hours via scheduled loop. Pulls from 30+ sources: RSS, CISA KEV, NVD, ZDI, Exploit-DB, Shodan, phishing feeds, breach checks, paste sites, web mentions.</p>
 </li>
 <li>
-<p><a href="blog/honeypot_azure/honeypot.html">AZURE: Microsoft Sentinel Honeypot &amp; Attack Monitoring Lab</a><br>
-<em>Published on December 01, 2025</em></p>
+<p><strong>Backend</strong> (<code>app/api.py</code>)<br>
+FastAPI + SQLite. Exposes <code>/articles</code>, <code>/company-info</code>, <code>/company-intel</code>. Handles deduplication, ISO 8601 UTC timestamps, NVD enrichment.</p>
 </li>
 <li>
-<p><a href="robot.html">Vulnhub: Mr. Robot Walkthrough</a><br>
-<em>Published on November 14, 2025</em></p>
-</li>
-<li>
-<p><a href="dc-2/dc2.html">DC:2 Walkthrough</a><br>
-<em>Published on November 12, 2025</em></p>
-</li>
-<li>
-<p><a href="dc1.html">DC:1 Walkthrough</a><br>
-<em>Published on November 10, 2025</em></p>
+<p><strong>Frontend</strong> (<code>ui/</code> folder)<br>
+React + Vite + Tailwind CSS. Responsive dashboard with global/company views, category filters, dark mode, clean cards.</p>
 </li>
 </ul>
-<hr>
+<p>Everything is local. No cloud. Full control. Zero external dependencies beyond API keys you choose.</p>
+<p><img src="file:///c:\Users\Omen\OneDrive\Cyber Security\Git Website__n__MarkDown\cti-lab\image-lab\Architecture.jpg" alt="Architecture Overview"><br>
+<em>Collector → SQLite → FastAPI → React dashboard</em></p>
+<h2 id="key-features">Key Features</h2>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Global Threat Feeds</td>
+<td>RSS (THN, Krebs, BleepingComputer), CISA KEV, NVD, ZDI, Exploit-DB</td>
+</tr>
+<tr>
+<td>Company-Specific Alerts</td>
+<td>Phishing, breaches (HIBP + DeHashed), Shodan exposures, paste/leak mentions, web mentions</td>
+</tr>
+<tr>
+<td>Automatic Enrichment</td>
+<td>CVE extraction + CVSS scores from NVD API</td>
+</tr>
+<tr>
+<td>MITRE ATT&amp;CK Tagging</td>
+<td>Keyword-based mapping to common techniques (expandable)</td>
+</tr>
+<tr>
+<td>Paste &amp; Leak Monitoring</td>
+<td>Multi-source scanning (LeakCheck, DDG → Pastebin fallback)</td>
+</tr>
+<tr>
+<td>Modern Dashboard</td>
+<td>React + Tailwind, dark mode, filters, responsive design</td>
+</tr>
+<tr>
+<td>One-Command Startup</td>
+<td><code>npm run dev:all</code> launches collector, API, and frontend simultaneously</td>
+</tr>
+</tbody>
+</table>
+<p><img src="file:///c:\Users\Omen\OneDrive\Cyber Security\Git Website__n__MarkDown\cti-lab\image-lab\Company.png" alt="Company Intelligence View">
+<em>Company-focused alerts: phishing, breaches, Shodan, paste detections</em></p>
+<h2 id="benefits-of-using-cti-lab">Benefits of Using CTI-Lab</h2>
+<p><strong>Proactive Defense</strong><br>
+Early warning system for brand/domain/email impersonation, credential leaks, and exposed assets.</p>
+<p><strong>Time Savings</strong><br>
+Automates collection and filtering — hours saved per week.</p>
+<p><strong>Centralized Visibility</strong><br>
+One dashboard instead of 15 tabs and tools.</p>
+<p><strong>Actionable Insights</strong>
+Company-specific alerts let you respond directly to risks targeting your organization</p>
+<p><strong>Cost-Effective</strong><br>
+Built on open-source tools + free-tier APIs (Shodan, NVD). Optional paid HIBP.</p>
+<p><strong>Customizable</strong><br>
+Easily add feeds, keywords, alerts, or new enrichment logic.</p>
+<p><strong>Learning &amp; Portfolio Value</strong><br>
+Full-stack security project showing Python, FastAPI, React, scraping, scheduling, CTI workflows.</p>
+<h2 id="technical-highlights--lessons-learned">Technical Highlights &amp; Lessons Learned</h2>
+<ul>
+<li><strong>SQLite</strong> — perfect for local, zero-config persistence</li>
+<li><strong>NVD API</strong> — automatic CVSS/CVE enrichment</li>
+<li><strong>Multi-source resilience</strong> — strict DeHashed + free fallbacks (Firefox Monitor, LeakCheck)</li>
+<li><strong>Polite scraping</strong> — User-Agent rotation, delays, fallbacks</li>
+<li><strong>Clean config</strong> — <code>.env.example</code> + <code>.gitignore</code> make onboarding easy</li>
+</ul>
+<p>Biggest lesson: <strong>Automation turns passive reading into active defense</strong>.</p>
+<h2 id="getting-started">Getting Started</h2>
+<pre><code class="language-bash"><span class="hljs-comment"># Clone</span>
+git <span class="hljs-built_in">clone</span> https://github.com/ewanoleghe/cti-lab.git
+<span class="hljs-built_in">cd</span> cti-lab
 
-      </div>
-      
-      
-    
-    
-    
-    
-    
-    
-  
-    </body></html>
+<span class="hljs-comment"># Python backend</span>
+python3 -m venv .venv
+<span class="hljs-built_in">source</span> .venv/bin/activate
+pip install -r requirements.txt
+
+<span class="hljs-comment"># Configuration</span>
+<span class="hljs-built_in">cp</span> .env.example .<span class="hljs-built_in">env</span>
+<span class="hljs-comment"># Edit .env → add API keys, company name, domain, keywords, emails</span>
+
+<span class="hljs-comment"># Frontend</span>
+<span class="hljs-built_in">cd</span> ui
+npm install
+<span class="hljs-built_in">cd</span> ..
+
+<span class="hljs-comment"># Run everything</span>
+npm run dev:all
+
+</code></pre>
+<p><strong>Open Dashboard:</strong> <a href="http://localhost:5173">http://localhost:5173</a><br>
+<strong>API Docs:</strong> <a href="http://localhost:9000/docs">http://localhost:9000/docs</a></p>
+<blockquote>
+<p>Wait 2–5 minutes for the first collector run → then refresh.</p>
+</blockquote>
+<hr>
+<h2 id="security-best-practices">Security Best Practices</h2>
+<ul>
+<li>Never commit <code>.env</code> (already gitignored)</li>
+<li>Rotate API keys periodically</li>
+<li>Backup <code>cti_lab.db</code> securely</li>
+<li>Run in isolated environment/VM if paranoid</li>
+<li>Use minimal API scopes when possible</li>
+</ul>
+<hr>
+<h2 id="future-plans">Future Plans</h2>
+<ul>
+<li>AI summarization &amp; IOC extraction (local Ollama)</li>
+<li>Real-time alerting (Slack, Discord, email)</li>
+<li>Full MITRE ATT&amp;CK Navigator view</li>
+<li>Docker Compose + one-file deployment</li>
+<li>Public live demo (once stable)</li>
+</ul>
+<hr>
+<h2 id="conclusion">Conclusion</h2>
+<p>CTI-Lab started as a personal frustration project and became a daily tool that gives me real-time visibility into both the global threat landscape and risks targeting my organization.</p>
+<p>It proves that powerful, focused threat intelligence doesn’t require expensive commercial platforms — sometimes the best solution is the one you build yourself.</p>
+<p>The code is open-source and available here:<br>
+<a href="https://github.com/ewanoleghe/cti-lab">https://github.com/ewanoleghe/cti-lab</a></p>
+<p>Questions, feedback, collaboration? Reach out via my portfolio:<br>
+<a href="https://ewanoleghe.github.io/">https://ewanoleghe.github.io/</a></p>
+<p>I’d love to hear how you use it or what you’d like to see next.</p>
+<p>Stay safe, stay vigilant.</p>
+<p>— <strong>Ewan Oleghe</strong><br>
+<em>March 15, 2026</em></p>
+
+            
+            
+        </body>
+        </html>
